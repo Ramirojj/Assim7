@@ -31,7 +31,8 @@ Console.WriteLine("-4Display posts ");
 
 Console.WriteLine("-4 Display posts ");
 switch(Console.ReadLine()){
-    case "1":                  
+    case "1": 
+          Blogs();               
 break;
   case "2":                  
 break;
@@ -48,5 +49,20 @@ break;
 
 
 
-      }  }    
+
+      
+      } 
+      
+      
+      
+       }
+       static void Blogs(){
+var db = new DataContext();
+var query = db.Blogs.OrderBy(b =>  b.Name);
+foreach (var item in query)
+ {
+      Console.WriteLine(item.Name); }
+}
+      
+          
     }
