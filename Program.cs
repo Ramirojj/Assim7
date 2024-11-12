@@ -24,7 +24,13 @@ using NLog;
 class Program {
     static void Main() {
        while(true){
-Console.WriteLine("Enter a name for a new Blog: ");
+Console.WriteLine("Display all blogs: ");
+Console.WriteLine("add blog");
+Console.WriteLine("Create Post ");
+Console.WriteLine("Display posts ");
+
+
+
        }
     }
 }
