@@ -41,7 +41,8 @@ break;
   case "3": 
     CPost();                 
 break;
-  case "4":                  
+  case "4":  
+   DPost();                
 break;
     default:
     Console.WriteLine("Please try again");
@@ -109,7 +110,27 @@ context.Posts.Add(new Post { BlogId = blogId, Title = title, Content = content }
 context.SaveChanges();
 Console.WriteLine("Post save.");
  }
- }    
+ }
+ static void DPost()
+{
+using var context = new DataContext();
+     Console.Write("Enter Blog ID to see posts: ");if (!int.TryParse(Console.ReadLine(), out int blogId))
+{
+Console.WriteLine("Invalid Blog ID. Please enter a valid number.");
+  return; }
+ var posts = context.Posts.Where(p => p.BlogId == blogId).ToList();
+if (posts.Count == 0)
+ {Console.WriteLine("No posts found.");
+   return;
+    }
+foreach (var post in posts)
+{
+Console.WriteLine($"Post ID: {post.PostId}, Title: {post.Title}");
+Console.WriteLine($"Content: {post.Content}");
+}
+ 
+ }
+     
       
           
     }
