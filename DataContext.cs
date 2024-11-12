@@ -17,6 +17,6 @@ public class DataContext : DbContext
     // *******************************************************************
     // ## last 2 digits of CRN
     // XXX your initials
-    optionsBuilder.UseSqlServer(@"Server=bitsql.wctc.edu;Database=Blogs_##_XXX;User ID=YYY;Password=ZZZ");
+    optionsBuilder.UseSqlServer(@"Server=bitsql.wctc.edu;Database=Blogs_22_rjj;Userrj ID=YYY;Password=");
   }
 }
