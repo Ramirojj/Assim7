@@ -24,13 +24,29 @@ using NLog;
 class Program {
     static void Main() {
        while(true){
-Console.WriteLine("Display all blogs: ");
-Console.WriteLine("add blog");
-Console.WriteLine("Create Post ");
-Console.WriteLine("Display posts ");
+Console.WriteLine("-1Display all blogs: ");
+Console.WriteLine("-2add blog");
+Console.WriteLine("-3Create Post ");
+Console.WriteLine("-4Display posts ");
+
+Console.WriteLine("-4 Display posts ");
+switch(Console.ReadLine()){
+    case "1":                  
+break;
+  case "2":                  
+break;
+  case "3":                  
+break;
+  case "4":                  
+break;
+    default:
+    Console.WriteLine("Please try again");
+break;
 
 
-
-       }
-    }
 }
+
+
+
+      }  }    
+    }
